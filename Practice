@@ -1,4 +1,4 @@
-Q4)
+Q4) #to group by album
 
 Select
 al.AlbumId,
