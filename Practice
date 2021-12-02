@@ -10,3 +10,10 @@ From albums as al
 left join tracks as t on al.AlbumId = t.AlbumId
 
 Group by al.AlbumId
+
+Q5) #total number of cross join rows
+
+Select 
+invoices.InvoiceId
+from invoices 
+cross join invoice_items
