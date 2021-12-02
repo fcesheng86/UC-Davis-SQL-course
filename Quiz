@@ -1,0 +1,19 @@
+#ER diagram at https://ucde-rey.s3.amazonaws.com/DSV1015/ChinookDatabaseSchema.png
+
+Q4)
+Select 
+--Distinct A.EmployeeID,
+Distinct A.LastName as Manager_LastName,
+B.LastName as Employee_LastName
+From Employees as A
+Inner Join Employees as B on A.EmployeeID = B.ReportsTo
+
+Q5)
+Select
+c.FirstName,
+c.LastName,
+c.City,
+i.BillingCity
+From Customers as c
+Inner Join Invoices as i on c.CustomerId = i.CustomerId
+Where c.City <> i.BillingCity
