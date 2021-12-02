@@ -1,0 +1,12 @@
+Q4)
+
+Select
+al.AlbumId,
+al.Title,
+t.UnitPrice,
+Count (t.trackId),
+Sum (t.UnitPrice) as total_price
+From albums as al
+left join tracks as t on al.AlbumId = t.AlbumId
+
+Group by al.AlbumId
